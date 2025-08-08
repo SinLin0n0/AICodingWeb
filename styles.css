@@ -1,0 +1,37 @@
+:root{--gray-100:#f8f9fa;--gray-200:#e9ecef;--gray-300:#dee2e6;--gray-600:#6c757d;--gray-700:#495057;--gray-800:#343a40;--blue-600:#0d6efd;}
+*{box-sizing:border-box;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans","Hiragino Sans","Microsoft JhengHei",Arial,sans-serif;color:#212529;background:#f5f6f8;}
+.container{max-width:1200px;margin:0 auto;padding:0 16px;}
+/* Navbar */
+.navbar{background:var(--gray-800);color:#fff;position:sticky;top:0;z-index:10;}
+.nav-inner{height:56px;display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:8px;font-weight:600;}
+.brand-icon{font-size:18px;}
+.menu-toggle{background:transparent;border:0;padding:8px;cursor:pointer;}
+.menu-bar{display:block;width:18px;height:2px;background:#adb5bd;margin:3px 0;border-radius:1px;}
+/* Hero */
+.hero{background:#fff;text-align:center;padding:64px 0;border-bottom:1px solid var(--gray-200);}
+.hero-title{font-size:40px;margin:0 0 8px;}
+.hero-desc{max-width:720px;margin:0 auto 20px;color:var(--gray-600);line-height:1.7;}
+.hero-actions{display:inline-flex;gap:8px;}
+/* Buttons */
+.btn{display:inline-block;border-radius:6px;padding:8px 14px;font-size:14px;line-height:1.2;cursor:pointer;border:1px solid transparent;}
+.btn-primary{background:var(--blue-600);color:#fff;border-color:var(--blue-600);}
+.btn-secondary{background:transparent;color:var(--gray-600);border-color:var(--gray-300);}
+.btn-outline{background:transparent;color:var(--gray-600);border-color:var(--gray-300);}
+.btn-sm{padding:4px 10px;font-size:12px;border-radius:4px;}
+/* Cards */
+.main{background:var(--gray-100);padding:40px 0;}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.card{background:#fff;border:1px solid var(--gray-300);border-radius:8px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.05);}
+.card-thumb{height:180px;background:var(--gray-700);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;}
+.card-body{padding:16px;}
+.card-text{color:var(--gray-600);margin:0;}
+.card-actions{margin-top:12px;display:flex;align-items:center;justify-content:space-between;}
+.action-buttons{display:flex;gap:8px;}
+.text-muted{color:var(--gray-600);}
+/* Footer */
+.footer{background:#fff;border-top:1px solid var(--gray-200);text-align:center;color:var(--gray-600);padding:24px 0;}
+/* RWD */
+@media(max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.hero{padding:48px 0;}.cards-grid{grid-template-columns:1fr;}}
