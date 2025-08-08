@@ -29,6 +29,19 @@ function renderCards(data) {
 loadCards();
 
 const toggle = document.querySelector(".menu-toggle");
-toggle?.addEventListener("click", () => {
-  alert("You can connect this to a sidebar or other interactions");
-});
+const sitePanel = document.getElementById("sitePanel");
+function togglePanel() {
+  const isHidden = sitePanel.hasAttribute("hidden");
+  if (isHidden) {
+    sitePanel.removeAttribute("hidden");
+    requestAnimationFrame(() => sitePanel.classList.add("show"));
+  } else {
+    sitePanel.classList.remove("show");
+    sitePanel.addEventListener(
+      "transitionend",
+      () => sitePanel.setAttribute("hidden", ""),
+      { once: true }
+    );
+  }
+}
+toggle?.addEventListener("click", togglePanel);
